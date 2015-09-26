@@ -1,0 +1,15 @@
+diff --git a/desktop/Library_sofficeapp.mk b/desktop/Library_sofficeapp.mk
+index 467fecc..e7f69b3 100644
+--- a/desktop/Library_sofficeapp.mk
++++ b/desktop/Library_sofficeapp.mk
+@@ -120,6 +120,10 @@ endif
+ endif
+ 
+ # LibreOfficeKit bits
++$(eval $(call gb_Library_add_exception_objects,sofficeapp,\
++	desktop/source/lib/init \
++))
++
+ ifneq ($(filter $(OS),ANDROID IOS),)
+ $(eval $(call gb_Library_add_exception_objects,sofficeapp,\
+ 	desktop/source/lib/init \
