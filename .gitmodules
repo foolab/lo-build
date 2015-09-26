@@ -1,0 +1,3 @@
+[submodule "libreoffice"]
+	path = libreoffice
+	url = git://anongit.freedesktop.org/libreoffice/core
