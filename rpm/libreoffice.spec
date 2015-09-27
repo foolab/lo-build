@@ -24,6 +24,7 @@ BuildRequires: gperf
 BuildRequires: python
 BuildRequires: bison
 BuildRequires: flex
+BuildRequires: fakelibs
 
 %description
  A document viewer for Sailfish OS
