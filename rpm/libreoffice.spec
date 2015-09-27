@@ -31,6 +31,7 @@ BuildRequires: flex
 %prep
 %setup -q -n %{name}-%{version}/%{name}
 %patch0 -p1
+mv ../tarballs external
 
 %build
 ./autogen.sh \
