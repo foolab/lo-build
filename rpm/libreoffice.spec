@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(expat)
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(fontconfig)
 BuildRequires: pkgconfig(libcurl)
+BuildRequires: pkgconfig(libpng)
 BuildRequires: perl(Archive::Zip)
 BuildRequires: zip
 BuildRequires: gperf
@@ -84,7 +85,8 @@ mv ../tarballs external
     --with-system-zlib \
     --with-system-expat \
     --with-system-openssl \
-    --with-system-curl
+    --with-system-curl \
+    --with-system-libpng
 #    --enable-mergelibs
 
 #make
