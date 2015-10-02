@@ -90,12 +90,13 @@ mv ../tarballs external
 #    --enable-mergelibs
 
 #make
-make -j 1  -rs -f Makefile.gbuild build
+make -j 2  -rs -f Makefile.gbuild build
 
 %install
 mkdir -p %{buildroot}/%{_libdir}/libreoffice/
+find instdir/program -name "*.so*" | xargs strip
 mv instdir/program %{buildroot}/%{_libdir}/libreoffice/
-find %{buildroot}/%{_libdir}/libreoffice/ -name "*.so*" | xargs strip
+rm -rf workdir
 
 %files
 %defattr(-,root,root,-)
