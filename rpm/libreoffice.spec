@@ -90,7 +90,7 @@ mv ../tarballs external
 #    --enable-mergelibs
 
 #make
-make -j 2  -rs -f Makefile.gbuild build
+make -j 1  -rs -f Makefile.gbuild build
 
 %install
 mkdir -p %{buildroot}/%{_libdir}/libreoffice/
