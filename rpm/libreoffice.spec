@@ -98,7 +98,7 @@ find instdir/program -name "*.so*" | xargs chmod 644
 find instdir/program -name "*.so*" | xargs strip
 
 mv instdir/program %{buildroot}/%{_libdir}/libreoffice/
-rm -rf workdir
+rm -rf `pwd`
 
 %files
 %defattr(-,root,root,-)
