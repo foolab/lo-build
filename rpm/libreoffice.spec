@@ -28,12 +28,14 @@ BuildRequires: flex
 BuildRequires: fakelibs
 
 %description
- A document viewer for Sailfish OS
+libreoffice kit for Sailfish OS
 
 %prep
 %setup -q -n %{name}-%{version}/%{name}
 %patch0 -p1
 mv ../tarballs external
+# We don't want those
+rm -rf dictionaries helpcontent2 translations
 
 %build
 ./autogen.sh \
@@ -95,10 +97,10 @@ make -j 1  -rs -f Makefile.gbuild build
 %install
 mkdir -p %{buildroot}/%{_libdir}/libreoffice/
 find instdir/program -name "*.so*" | xargs chmod 644
-find instdir/program -name "*.so*" | xargs strip
+#find instdir/program -name "*.so*" | xargs strip
 
 mv instdir/program %{buildroot}/%{_libdir}/libreoffice/
-rm -rf `pwd`
+#rm -rf `pwd`
 
 %files
 %defattr(-,root,root,-)
