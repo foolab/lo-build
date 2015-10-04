@@ -1,7 +1,7 @@
 #%define strip /bin/true
-%define __requires_exclude  ^.*$
-%define __provides_exclude_from ^.*$
-%define __find_requires     %{nil}
+#%define __requires_exclude  ^.*$
+#%define __provides_exclude_from ^.*$
+#%define __find_requires     %{nil}
 #%global debug_package       %{nil}
 
 Name:          libreoffice
