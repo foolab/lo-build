@@ -97,10 +97,10 @@ make -j 1  -rs -f Makefile.gbuild build
 %install
 mkdir -p %{buildroot}/%{_libdir}/libreoffice/
 find instdir/program -name "*.so*" | xargs chmod 644
-#find instdir/program -name "*.so*" | xargs strip
+find instdir/program -name "*.so*" | xargs strip
 
 mv instdir/program %{buildroot}/%{_libdir}/libreoffice/
-#rm -rf `pwd`
+rm -rf `pwd`/*
 
 %files
 %defattr(-,root,root,-)
