@@ -99,9 +99,9 @@ mkdir -p %{buildroot}/%{_libdir}/libreoffice/
 find instdir/program -name "*.so*" | xargs chmod 644
 find instdir/program -name "*.so*" | xargs strip
 
-mv instdir/program %{buildroot}/%{_libdir}/libreoffice/
+mv instdir %{buildroot}/%{_libdir}/libreoffice/
 rm -rf `pwd`/*
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/libreoffice/program/*
+%{_libdir}/libreoffice/*
