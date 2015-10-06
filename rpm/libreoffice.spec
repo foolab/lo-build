@@ -98,6 +98,7 @@ make -j 1  -rs -f Makefile.gbuild build
 mkdir -p %{buildroot}/%{_libdir}/libreoffice/
 find instdir/program -name "*.so*" | xargs chmod 644
 find instdir/program -name "*.so*" | xargs strip
+find instdir/ -name "*.ttf" | xargs chmod 644
 
 mv instdir %{buildroot}/%{_libdir}/libreoffice/
 rm -rf `pwd`/*
